@@ -1,0 +1,15 @@
+kind: HTTPProxy
+apiVersion: projectcontour.io/v1
+metadata:
+  name: kubeapi-proxy
+  namespace: default
+spec:
+  virtualhost:
+    fqdn: k8s.csamp-tanzu.com
+    tls:
+      secretName: csamp-tanzu-wildcard
+  routes:
+    - services:
+        - name: kubernetes
+          port: 443
+          protocol: tls

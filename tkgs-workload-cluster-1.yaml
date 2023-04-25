@@ -1,0 +1,22 @@
+apiVersion: run.tanzu.vmware.com/v1alpha2
+kind: TanzuKubernetesCluster
+metadata:
+  name: tkgs-workload-cluster-1
+  namespace: h2o-lab
+spec:
+  topology:
+    controlPlane:
+      replicas: 3
+      vmClass: guaranteed-medium
+      storageClass: vc01cl01-t0compute
+      tkr:  
+        reference:
+          name: v1.23.8---vmware.3-tkg.1
+    nodePools:
+    - name: worker-nodepool-a1
+      replicas: 3
+      vmClass: best-effort-large
+      storageClass: vc01cl01-t0compute
+      tkr:  
+        reference:
+          name: v1.23.8---vmware.3-tkg.1

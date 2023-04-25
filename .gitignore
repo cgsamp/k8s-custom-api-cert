@@ -1,4 +1,5 @@
 # exclude secrets folder contents, but need one exception to create the folder
-somefolder/*
-!somefolder/.gitkeep 
+secrets/*
+!secrets/sample-*
 
+.DS_Store
