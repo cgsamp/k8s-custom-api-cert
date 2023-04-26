@@ -7,7 +7,7 @@ spec:
   virtualhost:
     fqdn: k8s.csamp-tanzu.com
     tls:
-      secretName: csamp-tanzu-wildcard
+      secretName: tls-certificate-secret
   routes:
     - services:
         - name: kubernetes
