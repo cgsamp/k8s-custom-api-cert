@@ -2,6 +2,8 @@
 
 This repository shows how to use [**Contour**](https://projectcontour.io/) to allow a remote client to connect to a Kubernetes cluster's Kube API using a third-party TLS certificate that can be validated against an external Certificate Authority.
 
+Thanks to [**Dodd Pfeffer**](https://www.linkedin.com/in/doddpfeffer/) for helping me use Contour!
+
 ## Dependencies and assumptions
 
 This repo uses 
